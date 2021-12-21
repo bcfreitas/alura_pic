@@ -1,4 +1,4 @@
-import { Component } from "@angular/core";
+import { Component, Input } from "@angular/core";
 
 @Component({
     //boa pratica prefixar todos os componentes
@@ -6,8 +6,9 @@ import { Component } from "@angular/core";
     templateUrl: 'photo.component.html'
 })
 export class PhotoComponent {
-    title = 'app';
-    urlImagem = 'https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/512px-React-icon.svg.png';
-    textoImagem = 'site google';
+    //o decorator Input permite passar os valores das propriedades diretamente nas chamadas do componente
+    @Input() title = '';
+    @Input() urlImagem = '';
+    @Input() textoImagem = 'site google';
   
 }
