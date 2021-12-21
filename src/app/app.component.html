@@ -1,3 +1,7 @@
-<ap-photo textoImagem='teste app' urlImagem='https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/512px-React-icon.svg.png'> </ap-photo>
-<ap-photo textoImagem='Imagem2' urlImagem='https://upload.wikimedia.org/wikipedia/commons/9/99/Unofficial_JavaScript_logo_2.svg'> </ap-photo>
-
+<!--uso da diretiva ngFor para iterar na propriedade photos-->
+<ap-photo
+    *ngFor="let photo of photos"
+    [urlImagem]="photo.url"
+    [textoImagem]="photo.description"
+>
+</ap-photo>
