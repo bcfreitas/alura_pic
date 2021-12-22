@@ -1,0 +1,7 @@
+<!--uso da diretiva ngFor para iterar na propriedade photos-->
+<ap-photo
+    *ngFor="let photo of photos"
+    [urlImagem]="photo.url"
+    [textoImagem]="photo.description"
+>
+</ap-photo>
