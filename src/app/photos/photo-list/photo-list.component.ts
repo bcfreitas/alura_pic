@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnDestroy, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { Subject } from 'rxjs';
 import { Photo } from '../photo/photo';
@@ -9,7 +9,7 @@ import { debounceTime } from 'rxjs/operators';
   templateUrl: './photo-list.component.html',
   styleUrls: ['./photo-list.component.css']
 })
-export class PhotoListComponent implements OnInit {
+export class PhotoListComponent implements OnInit, OnDestroy {
 
   photos: Photo[] = [];
   filter: string = '';
@@ -25,5 +25,9 @@ export class PhotoListComponent implements OnInit {
     this.debounce
       .pipe(debounceTime(300))
       .subscribe(filter2 => this.filter = filter2);
+  }
+
+  ngOnDestroy(): void {
+    this.debounce.unsubscribe();
   }
 }
