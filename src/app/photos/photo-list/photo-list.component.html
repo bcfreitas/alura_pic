@@ -11,7 +11,7 @@
 </div>
 <!--language expression para checar se a digitação da busca está funcionando -->
 {{ filter }}
-<ap-photos [photos]="photos"></ap-photos>
+<ap-photos [photos]="photos | filterByDescription: filter"></ap-photos>
 
 
 
