@@ -2,6 +2,15 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.0.7.
 
+Levantar antes o app API dentro da pasta API com npm install, npm start.
+
+Necessário instalar o NVM (Node Version Manager) para instalar a versão específica do Node.js 8.X.
+
+E instalar o ANgular CLI versao especifica 6.0.7:
+npm install -g @angular/cli@6.0.7
+
+Para levantar a API: npm install, npm start na pagina da api.
+
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.

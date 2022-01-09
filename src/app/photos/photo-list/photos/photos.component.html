@@ -1,0 +1,11 @@
+<!--uso da diretiva ngFor para iterar na propriedade photos-->
+<ol class="list-unstyled">
+  <li *ngFor="let cols of rows" class="row">
+    <div *ngFor="let photo of cols" clas ="col-4">
+      <ap-photo
+          [urlImagem]="photo.url"
+          [textoImagem]="photo.description">
+      </ap-photo>
+    </div>
+  </li>
+</ol>
