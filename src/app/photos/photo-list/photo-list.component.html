@@ -1,1 +1,17 @@
+<div class="text-center mt-3 mb-3">
+  <form>
+    <!--event bound, colocar parentese -->
+    <input
+      class="rounded"
+      type="search"
+      placeholder="search..."
+      autofocus
+      (keyup)="filter = $event.target.value">
+  </form>
+</div>
+<!--language expression para checar se a digitação da busca está funcionando -->
+{{ filter }}
 <ap-photos [photos]="photos"></ap-photos>
+
+
+

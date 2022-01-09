@@ -11,6 +11,7 @@ import { PhotoService } from '../photo/photo.service';
 export class PhotoListComponent implements OnInit {
 
   photos: Photo[] = [];
+  filter: string = '';
 
   //injetando dependência do ActivatedRoute para ter acesso a variáveis da rota ativa
   constructor(private photoService: PhotoService,
